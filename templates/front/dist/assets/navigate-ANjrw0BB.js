@@ -1,0 +1,1 @@
+import{et as e}from"./index-eMxQfo4y.js";function t(t,n,r){let i=`/index/${t}Detail`,a={id:n};r&&(a.centerType=r),e.push({path:i,query:a})}function n(t,n){let r=`/index/${t}`,i={};n&&(i.centerType=n),e.push({path:r,query:i})}export{n,t};

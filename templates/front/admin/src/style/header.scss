@@ -1,0 +1,283 @@
+/* 页面盒子 */
+.layout-page {
+  background-color: #FDF5E5;
+  min-height: 100vh;
+  padding: 30px;
+
+  /* 头部 */
+  .header-wrapper {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: calc(100% - 224px);
+    height: 84px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    background: #A1BDAC;
+    font-size: 14px;
+    z-index: 202;
+    box-shadow: 0px 3px 20px 1px rgba(7, 25, 9, 0.74);
+
+    .header-title {
+      font-weight: 400;
+      color: #071909;
+      margin: 0 auto 0 0;
+    }
+
+    /* 天气 */
+    .weather {
+      color: #fff;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+  }
+
+  /* 公告 */
+  .notice {
+    width: 50%;
+    display: flex;
+
+    .img_notice {
+      width: 24px;
+      height: 24px;
+    }
+
+    .notice-title {
+      display: flex;
+      width: 50px;
+      padding-left: 10px;
+      border-right: 2px solid #A1BDAC;
+      color: #333333;
+      font-weight: bold;
+    }
+  }
+
+  /* 菜单 */
+  .menu-wrapper {
+    position: fixed;
+    left: 0px;
+    width: 224px;
+    top: 0px;
+    height: 100%;
+    overflow: hidden;
+    z-index: 201;
+    border-width: 0 !important;
+    border-style: solid;
+    border-color: #F9A39B;
+    background: #6CA08E;
+    padding: 20px 0 0;
+
+    .header-title2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        display: none;
+      }
+    }
+
+
+    /* 一级 鼠标悬浮/点击 */
+    & .el-menu {
+      .el-menu-item:hover,
+      .el-menu-item.is-active {
+        background: #A1BDAC !important;
+        color: #FEFEFE !important;
+      }
+    }
+
+    /* 一级菜单栏 */
+    & .el-menu {
+      background: #6CA08E;
+      padding: 0px 0 0;
+
+      .el-menu-item {
+        color: #F9ECDB;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+        height: auto !important;
+        padding: 10px 0 !important;
+        line-height: 1.5;
+      }
+
+      .el-menu-item .el-icon {
+        font-size: 64px;
+        background: inherit;
+        color: inherit;
+        width: 100%;
+      }
+
+      .el-menu-item span {
+        width: 100%;
+        display: block !important;
+        text-align: center;
+        color: #000;
+      }
+
+
+    }
+
+    /* 二级菜单的父级 */
+    .el-sub-menu__title:hover,
+    .el-sub-menu__title:focus,
+    .el-sub-menu__title .is-active {
+      background: #A1BDAC !important;
+      color: #FEFEFE !important;
+    }
+
+    /* 二级菜单栏  父级*/
+    .el-sub-menu__title {
+      color: #FFFFFF;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      height: auto !important;
+      align-items: center;
+      line-height: 1.5;
+
+      span {
+        color: #000;
+      }
+
+      .el-sub-menu .el-icon {
+        font-size: 32px;
+        background: inherit;
+        color: inherit;
+        width: 100%;
+      }
+
+      .el-sub-menu span {
+        width: 100%;
+        display: block !important;
+        text-align: center;
+      }
+
+    }
+
+    .el-sub-menu__title {
+      padding: 10px 0 !important;
+    }
+
+    .el-sub-menu {
+      .el-menu-item {
+        padding: 0 !important;
+        height: 48px !important;
+        line-height: 48px;
+        margin: 10px 0;
+      }
+    }
+
+  }
+
+
+  .el-menu--inline {
+    background: none !important;
+    text-align: left !important;
+
+    .el-menu-item:hover,
+    .el-menu-item.is-active {
+      background: none !important;
+      color: #0CAF60 !important;
+      padding: 0 10px !important;
+    }
+
+  }
+
+  .el-breadcrumb {
+    padding: 0 !important;
+  }
+
+  /* 内容区  */
+  .main-wrapper {
+    padding: 10px 0;
+    margin-top: 60px;
+    margin-left: 225px;
+    overflow: hidden;
+  }
+
+  /* 首页 */
+  .content-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+  }
+}
+
+/* 过渡动画 */
+.transiton_1 {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4, 0, 1, 1);
+  transition-duration: .3s;
+}
+
+/* 这两个动画类名不能变，keyframes样式可以修改 */
+.animate__fadeSlideIn {
+  animation-name: fadeSlideIn;
+}
+
+.animate__fadeSlidOut {
+  animation-name: fadeSlideOut;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    transform: translate3d(-30px, 0, 0);
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeSlideOut {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate3d(30px, 0, 0);
+  }
+}
+
+.rolemenus {
+  background: #FEFCF3;
+  padding: 13px;
+
+  .img {
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 100%;
+  }
+
+  .name {
+    display: block !important;
+    font-size: 14px;
+    color: #111827 !important;
+  }
+}
+
+.el-sub-menu__title .el-icon:first-child {
+  font-size: 60px;
+  width: 60px;
+  color: #F9ECDB;
+}
+
+.menu-wrapper {
+  & .menu-item {
+    &.act {
+      background: red;
+    }
+  }
+}

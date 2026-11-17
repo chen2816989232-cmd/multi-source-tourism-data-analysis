@@ -1,0 +1,43 @@
+# --- Secrets / local config ---
+config.ini
+config.local.ini
+.env
+.env.*
+util/alipay_key/
+*.pem
+*.p12
+*.pfx
+
+# --- Large / generated data ---
+ctripjd.csv
+tmp_dataset_*.csv
+tmp_dataset_filelist.txt
+db/*.sql
+*.log
+
+# --- Deploy / runtime ---
+.deploy-staging/
+.deploy-artifacts/
+.runtime-logs/
+.idea/
+.vscode/
+media/
+staticfiles/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# --- Node ---
+node_modules/
+*.tsbuildinfo
+npm-debug.log*
+
+# --- OS ---
+Thumbs.db
+Desktop.ini
+.DS_Store

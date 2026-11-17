@@ -1,0 +1,1 @@
+import{K as e}from"./index-eMxQfo4y.js";function t(){return e({url:`config/list`,method:`get`,params:{page:1,limit:99,type:`1`}})}function n(t,n={}){return e({url:t+`/autoSort`,method:`get`,params:{page:1,limit:6,...n}})}export{t as n,n as t};

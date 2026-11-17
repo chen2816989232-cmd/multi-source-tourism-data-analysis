@@ -1,0 +1,1 @@
+import{Tt as e,ft as t}from"./index-eMxQfo4y.js";import{t as n}from"./_plugin-vue_export-helper-CS_Jz9bW.js";var r={};function i(n,r){return e(),t(`div`,null,`404 页面未找到!`)}var a=n(r,[[`render`,i]]);export{a as default};

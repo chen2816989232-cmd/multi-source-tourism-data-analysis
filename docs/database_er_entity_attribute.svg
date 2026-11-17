@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="850" viewBox="0 0 1300 850">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#edf1f6" stroke-width="1"/>
+    </pattern>
+    <style>
+      .bg { fill: url(#grid); }
+      .entity { fill: #fff; stroke: #111; stroke-width: 2.2; }
+      .attr { fill: #fff; stroke: #111; stroke-width: 2; }
+      .rel { fill: #fff; stroke: #111; stroke-width: 2; }
+      .line { stroke: #111; stroke-width: 2; fill: none; }
+      .text {
+        font-family: "Microsoft YaHei", "SimSun", Arial, sans-serif;
+        font-size: 22px;
+        fill: #111;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .small { font-size: 19px; }
+      .mark {
+        font-family: "Times New Roman", serif;
+        font-size: 20px;
+        fill: #111;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1300" height="850"/>
+
+  <!-- 实体 -->
+  <rect class="entity" x="80" y="360" width="125" height="58"/>
+  <text class="text" x="142.5" y="389">用户</text>
+
+  <rect class="entity" x="285" y="635" width="145" height="58"/>
+  <text class="text" x="357.5" y="664">用户评论</text>
+
+  <rect class="entity" x="575" y="95" width="150" height="60"/>
+  <text class="text" x="650" y="125">原始数据</text>
+
+  <rect class="entity" x="575" y="360" width="150" height="62"/>
+  <text class="text" x="650" y="391">核心景点</text>
+
+  <rect class="entity" x="965" y="225" width="145" height="58"/>
+  <text class="text" x="1037.5" y="254">平台评论</text>
+
+  <rect class="entity" x="965" y="610" width="145" height="58"/>
+  <text class="text" x="1037.5" y="639">情感分析</text>
+
+  <rect class="entity" x="575" y="645" width="150" height="60"/>
+  <text class="text" x="650" y="675">预测结果</text>
+
+  <!-- 属性 -->
+  <ellipse class="attr" cx="142" cy="265" rx="62" ry="28"/>
+  <text class="text small" x="142" y="265">用户编号</text>
+  <line class="line" x1="142" y1="293" x2="142" y2="360"/>
+
+  <ellipse class="attr" cx="357" cy="775" rx="68" ry="28"/>
+  <text class="text small" x="357" y="775">评论内容</text>
+  <line class="line" x1="357" y1="747" x2="357" y2="693"/>
+
+  <ellipse class="attr" cx="650" cy="38" rx="68" ry="28"/>
+  <text class="text small" x="650" y="38">来源平台</text>
+  <line class="line" x1="650" y1="66" x2="650" y2="95"/>
+
+  <ellipse class="attr" cx="650" cy="285" rx="68" ry="28"/>
+  <text class="text small" x="650" y="285">景点名称</text>
+  <line class="line" x1="650" y1="313" x2="650" y2="360"/>
+
+  <ellipse class="attr" cx="1148" cy="145" rx="68" ry="28"/>
+  <text class="text small" x="1148" y="145">评论内容</text>
+  <line class="line" x1="1120" y1="170" x2="1068" y2="225"/>
+
+  <ellipse class="attr" cx="1148" cy="735" rx="68" ry="28"/>
+  <text class="text small" x="1148" y="735">情感结果</text>
+  <line class="line" x1="1120" y1="710" x2="1068" y2="668"/>
+
+  <ellipse class="attr" cx="650" cy="790" rx="68" ry="28"/>
+  <text class="text small" x="650" y="790">预测热度</text>
+  <line class="line" x1="650" y1="762" x2="650" y2="705"/>
+
+  <!-- 关系 -->
+  <polygon class="rel" points="590,245 650,212 710,245 650,278"/>
+  <text class="text small" x="650" y="245">融合</text>
+  <line class="line" x1="650" y1="155" x2="650" y2="212"/>
+  <line class="line" x1="650" y1="278" x2="650" y2="360"/>
+  <text class="mark" x="675" y="185">N</text>
+  <text class="mark" x="675" y="330">1</text>
+
+  <polygon class="rel" points="155,525 215,492 275,525 215,558"/>
+  <text class="text small" x="215" y="525">发表</text>
+  <line class="line" x1="142" y1="418" x2="198" y2="499"/>
+  <line class="line" x1="255" y1="545" x2="305" y2="635"/>
+  <text class="mark" x="158" y="462">1</text>
+  <text class="mark" x="288" y="595">N</text>
+
+  <polygon class="rel" points="435,525 495,492 555,525 495,558"/>
+  <text class="text small" x="495" y="525">属于</text>
+  <line class="line" x1="430" y1="635" x2="475" y2="555"/>
+  <line class="line" x1="535" y1="500" x2="590" y2="422"/>
+  <text class="mark" x="452" y="600">N</text>
+  <text class="mark" x="565" y="455">1</text>
+
+  <polygon class="rel" points="775,305 835,272 895,305 835,338"/>
+  <text class="text small" x="835" y="305">采集</text>
+  <line class="line" x1="725" y1="370" x2="790" y2="328"/>
+  <line class="line" x1="895" y1="305" x2="965" y2="260"/>
+  <text class="mark" x="760" y="350">1</text>
+  <text class="mark" x="930" y="285">N</text>
+
+  <polygon class="rel" points="978,450 1038,417 1098,450 1038,483"/>
+  <text class="text small" x="1038" y="450">分析</text>
+  <line class="line" x1="1038" y1="283" x2="1038" y2="417"/>
+  <line class="line" x1="1038" y1="483" x2="1038" y2="610"/>
+  <text class="mark" x="1065" y="355">1</text>
+  <text class="mark" x="1065" y="555">1</text>
+
+  <polygon class="rel" points="590,535 650,502 710,535 650,568"/>
+  <text class="text small" x="650" y="535">预测</text>
+  <line class="line" x1="650" y1="422" x2="650" y2="502"/>
+  <line class="line" x1="650" y1="568" x2="650" y2="645"/>
+  <text class="mark" x="675" y="465">1</text>
+  <text class="mark" x="675" y="615">N</text>
+</svg>

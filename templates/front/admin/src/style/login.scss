@@ -1,0 +1,260 @@
+/* 定义全局主题变量 */
+:root {
+  /* 主色-按钮 */
+  --btn-bg-color-: #6CA08E;
+  --btn-bg-hover-color-: #7242eb;
+  --btn-font-color-: #FFF;
+  --btn-font-hover-color-: #FFF;
+
+  /* 副色-按钮 */
+  --btn2-bg-color-: #FAFAFA;
+  --btn2-bg-hover-color-: #d4d4d4;
+  --btn2-font-color-: #333333;
+  --btn2-font-hover-color-: #333333;
+}
+
+.login {
+  background: url(http://codegen.caihongy.cn/20260323/cc204ba18caf45a68a1ad014cfd6197d.jpg) no-repeat center center / cover;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+
+  /* 表单盒子 */
+  .loginform {
+    margin-left: 117px;
+    width: 636px;
+    height: auto;
+    border-radius: 8px;
+    padding: 20px 0;
+    font-size: 16px;
+  }
+
+  /* 媒体查询 */
+  @media screen and (max-width: 768px) {
+    .loginform {
+      width: 100%;
+    }
+  }
+
+  .logo {
+    display: none;
+    position: fixed;
+    left: 46%;
+    top: 0;
+
+    img {
+      height: 80px;
+    }
+  }
+
+  /* 表单盒子：二级 */
+  .loginform-wrapper {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  /* 标题 */
+  .login-tip {
+    display: none;
+    padding: 0;
+    color: red;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    order: 2;
+
+  }
+
+  /* 标题 */
+  .title-box {
+    width: 100%;
+    padding: 0;
+    color: #022926;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+    order: 1;
+
+  }
+
+  .inner-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    order: 3;
+  }
+
+  /* 表单项 */
+  .el-form-item {
+    order: 3;
+    border-radius: 0;
+    padding: 0;
+    margin: 15px 0;
+    width: 100%;
+    height: auto;
+  }
+
+  /* 提示语 */
+  .el-select__placeholder {
+    color: #6F5740 !important;
+  }
+
+  .el-input__inner::placeholder {
+    color: #6F5740 !important;
+
+  }
+
+  .el-input__wrapper {
+    background: none;
+    border: 0 !important;
+    padding: 0 !important;
+    display: flex;
+  }
+
+  /* 输入框  */
+  .el-input__inner {
+    color: #6F5740;
+    width: 100%;
+    padding: 1px 11px;
+    background: #FEFCF3;
+    border: 0px solid #E0DACC !important;
+    border-radius: 12px;
+  }
+
+
+  /* 标签 */
+  .el-form-item__label {
+    color: #fff;
+  }
+
+  /* 通用输入框 */
+  .el-form-item__content {
+    line-height: 48px;
+  }
+
+  /* 文本框 */
+  .el-input {
+    --el-input-height: 48px;
+    font-size: 16px;
+    border-radius: 12px;
+
+  }
+
+  /* 下拉 */
+  .el-form-item__content .el-input__wrapper,
+  .el-form-item__content .el-select__wrapper,
+  .el-textarea__inner,
+  .ql,
+  .el-select {
+    line-height: 48px;
+    height: 48px;
+    font-size: 16px;
+    color: #C3C7CC;
+    width: 100%;
+    background: #FEFCF3;
+    border: 1px solid #E0DACC !important;
+    border-radius: 12px;
+  }
+
+
+  /* 验证码 */
+  .code {
+    .el-form-item__content {
+      flex-wrap: nowrap;
+      font-size: 16px;
+    }
+
+    .code-box {
+      cursor: pointer;
+      margin: 0 0 0 10px;
+      display: flex;
+      border-radius: 12px;
+      flex: 0 0 auto;
+      background: #6CA08E;
+      width: 120px;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+      gap: 4px;
+    }
+
+  }
+
+  /* 注册按钮盒子 */
+  .register-box {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .registerbox-login {
+    order: 4;
+
+    .item {
+      cursor: pointer;
+      color: #6CA08E !important;
+      background: #FDFBF2;
+      padding: 12px;
+      font-weight: bold;
+      border-radius: 12px;
+    }
+  }
+
+  .face-forget-wrapper {
+    display: flex;
+    padding: 10px 0;
+    order: 5;
+    width: 100%;
+    flex-wrap: wrap;
+
+  }
+
+  .forget-box {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .forget-btn {
+    color: #000 !important;
+  }
+
+  /* 登录按钮 */
+  .login-btn,
+  .email-btn,
+  .face-btn {
+    order: 5;
+    border: 0px solid transparent;
+    border-radius: 12px;
+    padding: 4px 15px;
+    margin: 15px 0;
+    background: #6CA08E!important;
+    width: 100%;
+    color: #fff!important;
+    font-size: 20px !important;
+    height: 48px;
+    text-decoration: none !important;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  /* 人脸识别 */
+  .forget-btn {}
+}
